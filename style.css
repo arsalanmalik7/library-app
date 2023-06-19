@@ -1,0 +1,475 @@
+body {
+    background: url(./images/21957290_2111.w039.n003.23B.p1.23.jpg);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+#inputs {
+    display: flex;
+    justify-content: center;
+
+
+
+}
+
+#formOfInputs {
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.26);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.7px);
+    -webkit-backdrop-filter: blur(7.7px);
+    border: 1px solid rgba(255, 255, 255, 0.47);
+}
+
+#bookName,
+#authorName,
+#genre {
+    margin: 1rem;
+    font-size: 1.3rem;
+    border-radius: 2rem;
+
+}
+
+label {
+    font-size: 1.4rem;
+    font-weight: bolder;
+}
+
+.hidden {
+    display: none;
+    text-align: center;
+}
+
+#enterBook {
+
+    border: none;
+    outline: none;
+    background-color: #6c5ce7;
+    padding: 10px 20px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff;
+    border-radius: 5px;
+    transition: all ease 0.1s;
+    box-shadow: 0px 5px 0px 0px #a29bfe;
+}
+
+#enterBook:active {
+    transform: translateY(5px);
+    box-shadow: 0px 0px 0px 0px #a29bfe;
+}
+
+@keyframes loader_5191 {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.square {
+    background: black;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    margin-top: -5px;
+    margin-left: -5px;
+}
+
+@media screen and (max-width:425px) {
+    .square {
+        background: black;
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        top: 85%;
+        left: 50%;
+        margin-top: -5px;
+        margin-left: -5px;
+    }
+}
+
+#head {
+    text-align: center;
+}
+
+#sq1 {
+    margin-top: -25px;
+    margin-left: -25px;
+    animation: loader_5191 675ms ease-in-out 0s infinite alternate;
+}
+
+#sq2 {
+    margin-top: -25px;
+    animation: loader_5191 675ms ease-in-out 75ms infinite alternate;
+}
+
+#sq3 {
+    margin-top: -25px;
+    margin-left: 15px;
+    animation: loader_5191 675ms ease-in-out 150ms infinite;
+}
+
+#sq4 {
+    margin-left: -25px;
+    animation: loader_5191 675ms ease-in-out 225ms infinite;
+}
+
+#sq5 {
+    animation: loader_5191 675ms ease-in-out 300ms infinite;
+}
+
+#sq6 {
+    margin-left: 15px;
+    animation: loader_5191 675ms ease-in-out 375ms infinite;
+}
+
+#sq7 {
+    margin-top: 20px;
+    margin-left: -25px;
+    animation: loader_5191 675ms ease-in-out 450ms infinite;
+}
+
+#sq8 {
+    margin-top: 15px;
+    animation: loader_5191 675ms ease-in-out 525ms infinite;
+}
+
+#sq9 {
+    margin-top: 15px;
+    margin-left: 15px;
+    animation: loader_5191 675ms ease-in-out 600ms infinite;
+}
+
+
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Petemoss&display=swap");
+
+* {
+    box-sizing: border-box;
+    font-family: "Cinzel", serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+    margin: 0;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    background-color: #d9d9d9;
+}
+
+.book {
+    --book-height: 80vh;
+    --book-ratio: 1.4;
+    margin-left: 2rem;
+
+}
+
+.book>div {
+    height: var(--book-height);
+    width: calc(var(--book-height) / var(--book-ratio));
+    overflow: auto;
+    background-color: #0a0a0a;
+    transform: scale(0.9);
+    border-radius: 6px;
+    transform-origin: left;
+}
+
+.book-cover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 9;
+    text-align: center;
+    background: linear-gradient(135deg, black 25%, transparent 25%) -50px 0,
+        linear-gradient(225deg, black 25%, transparent 25%) -50px 0,
+        linear-gradient(315deg, black 25%, transparent 25%),
+        linear-gradient(45deg, black 25%, transparent 25%);
+    background-size: 2em 2em;
+    background-color: #232323;
+    color: white;
+    transition: transform 2s;
+}
+
+.book-cover::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    right: 20px;
+    top: 0;
+    bottom: 0;
+    background-color: #b11509;
+}
+
+h1 {
+    font-family: "Petemoss", cursive;
+    font-size: 70px;
+    font-weight: 300;
+    color: #dbd75d;
+}
+
+h2 {
+    font-size: 16px;
+}
+
+.separator {
+    --separator-size: 8px;
+    width: var(--separator-size);
+    height: var(--separator-size);
+    background-color: #dbd75d;
+    margin: 50px auto 60px auto;
+    border-radius: 50%;
+    position: relative;
+}
+
+.separator::after,
+.separator::before {
+    content: "";
+    position: absolute;
+    width: 12px;
+    background-color: rgb(224, 220, 220);
+    height: 2px;
+    top: calc(50% - 1px);
+}
+
+.separator::after {
+    left: 15px;
+}
+
+.separator::before {
+    right: 15px;
+}
+
+.book-content {
+    transform: scale(0.9) translateY(30px);
+    background-color: rgb(247, 237, 197) !important;
+    transition: all 0.3s 1s;
+}
+
+.book-content h3,
+.book-content p {
+    opacity: 0;
+    transition: all 0.3s 0.3s;
+}
+
+h3 {
+    padding: 30px;
+}
+
+p {
+    padding: 0px 30px 10px 30px;
+    text-align: justify;
+    font-size: 14px;
+}
+
+.book-cover>div {
+    transition: opacity 0s 0.6s;
+}
+
+.book:hover>.book-cover {
+    transform: rotateY(100deg) scale(0.9);
+}
+
+.book:hover>.book-cover>div {
+    opacity: 0;
+}
+
+.book:hover>.book-content {
+    transform: scale(0.9) translateY(0px);
+}
+
+.book:hover>.book-content h3,
+.book:hover>.book-content p {
+    opacity: 1;
+}
+
+.delete-btn {
+    padding: 17px 40px;
+    border-radius: 10px;
+    border: 0;
+    background-color: rgb(255, 56, 86);
+    letter-spacing: 1.5px;
+    font-size: 15px;
+    transition: all .3s ease;
+    box-shadow: rgb(201, 46, 70) 0px 10px 0px 0px;
+    color: hsl(0, 0%, 100%);
+    position: relative;
+    top: 11rem;
+    left: 5rem;
+}
+
+.delete-btn:hover {
+    box-shadow: rgb(201, 46, 70) 0px 7px 0px 0px;
+}
+
+.delete-btn:active {
+    background-color: rgb(255, 56, 86);
+    /*50, 168, 80*/
+    box-shadow: rgb(201, 46, 70) 0px 0px 0px 0px;
+    transform: translateY(5px);
+    transition: 200ms;
+}
+
+.update-btn {
+    padding: 17px 40px;
+    border-radius: 10px;
+    border: 0;
+    background-color: rgb(56, 136, 255);
+    letter-spacing: 1.5px;
+    font-size: 15px;
+    transition: all .3s ease;
+    box-shadow: rgb(46, 139, 201) 0px 10px 0px 0px;
+    color: hsl(0, 0%, 100%);
+    display: flex;
+    margin-left: 5rem;
+}
+
+.update-btn:hover {
+    box-shadow: rgb(46, 131, 201) 0px 7px 0px 0px;
+}
+
+.update-btn:active {
+    background-color: rgb(56, 126, 255);
+    /*50, 168, 80*/
+    box-shadow: rgb(46, 95, 201) 0px 0px 0px 0px;
+    transform: translateY(5px);
+    transition: 200ms;
+}
+
+#popupOverlay {
+    position: fixed;
+    top: 0rem;
+    left: 0rem;
+    display: flex;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+
+
+.form_main {
+    width: 350px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    padding: 30px 30px 30px 30px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.062);
+    align-self: center;
+
+}
+
+@media screen and (max-width:425px) {
+    .form_main {
+        width: 300px;
+    }
+}
+
+.heading {
+    font-size: 2.5em;
+    color: #2e2e2e;
+    font-weight: 700;
+    margin: 15px 0 30px 0;
+}
+
+.inputContainer {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.inputField {
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid rgb(173, 173, 173);
+    border-radius: 30px;
+    margin: 10px 0;
+    color: black;
+    font-size: .8em;
+    font-weight: 500;
+    box-sizing: border-box;
+    padding-left: 30px;
+}
+
+.inputField:focus {
+    outline: none;
+    border-bottom: 2px solid rgb(199, 114, 255);
+}
+
+.inputField::placeholder {
+    color: rgb(80, 80, 80);
+    font-size: 1em;
+    font-weight: 500;
+}
+
+#button {
+    position: relative;
+    width: 100%;
+    border: 2px solid #8000ff;
+    background-color: #8000ff;
+    height: 40px;
+    color: white;
+    font-size: .8em;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 30px;
+    margin: 10px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+#button::after {
+    content: "";
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.253);
+    height: 100%;
+    width: 150px;
+    top: 0;
+    left: -200px;
+    border-bottom-right-radius: 100px;
+    border-top-left-radius: 100px;
+    filter: blur(10px);
+    transition-duration: .5s;
+}
+
+#button:hover::after {
+    transform: translateX(600px);
+    transition-duration: .5s;
+}
+
+#corss {
+    position: relative;
+    padding: 0.5rem;
+    bottom: 3rem;
+    left: 8rem;
+    cursor: pointer;
+}

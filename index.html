@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./style.css">
+        <title>Library</title>
+    </head>
+    <body>
+        <div id="inputs">
+            <form id="formOfInputs">
+                <label for="bookName">Book Name:</label>
+                <input
+                    type="text"
+                    minlength="1"
+                    maxlength="25"
+                    id="bookName"
+                >
+                <br>
+                <label for="authorName">Author Name:</label>
+                <input
+                    type="text"
+                    minlength="1"
+                    maxlength="25"
+                    id="authorName"
+                >
+                <br>
+                <label for="genre">Genre:</label>
+                <input
+                    type="text"
+                    minlength="1"
+                    maxlength="25"
+                    id="genre"
+                >
+                <br>
+                <button type="submit" id="enterBook">Add a book</button>
+            </form>
+        </div>
+        <div>
+            <div class="loader" id="loading">
+                <div class="square" id="sq1"></div>
+                <div class="square" id="sq2"></div>
+                <div class="square" id="sq3"></div>
+                <div class="square" id="sq4"></div>
+                <div class="square" id="sq5"></div>
+                <div class="square" id="sq6"></div>
+                <div class="square" id="sq7"></div>
+                <div class="square" id="sq8"></div>
+                <div class="square" id="sq9"></div>
+            </div>
+            <h1 id="head"></h1>
+        </div>
+        <script type="module" src="./main.mjs"></script>
+    </body>
+</html>
